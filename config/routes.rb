@@ -1,4 +1,6 @@
 Mafalda::Application.routes.draw do
+  resources :votos
+
   resources :topicos
   root :to => 'topicos#index'
 
