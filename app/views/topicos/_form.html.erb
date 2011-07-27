@@ -1,0 +1,25 @@
+<%= form_for(@topico) do |f| %>
+  <% if @topico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@topico.errors.count, "error") %> prohibited this topico from being saved:</h2>
+
+      <ul>
+      <% @topico.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
