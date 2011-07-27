@@ -19,7 +19,7 @@
     <td><%= link_to '+1', votos_path(:topico_id => topico.id), :method => :post %></td>
     <td><%= link_to 'Show', topico %></td>
     <td><%= link_to 'Edit', edit_topico_path(topico) %></td>
-    <td><%= link_to 'Destroy', topico, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', topico, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
