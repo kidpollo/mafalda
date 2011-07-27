@@ -11,7 +11,7 @@
 
 <% @topicos.each do |topico| %>
   <tr>
-    <td><%= topico.titulo %></td>
+    <td><%= link_to topico.titulo, topico_path(topico.id) %></td>
     <td><%= topico.descripcion %></td>
     <td><%= link_to 'Show', topico %></td>
     <td><%= link_to 'Edit', edit_topico_path(topico) %></td>

@@ -44,7 +44,7 @@ class TopicosController < ApplicationController
 
     respond_to do |format|
       if @topico.save
-        format.html { redirect_to(@topico, :notice => 'Topico was successfully created.') }
+        format.html { redirect_to(root_path, :notice => 'Topico was successfully created.') }
         format.xml  { render :xml => @topico, :status => :created, :location => @topico }
       else
         format.html { render :action => "new" }
